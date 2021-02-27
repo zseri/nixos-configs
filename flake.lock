@@ -11,13 +11,13 @@
       "locked": {
         "lastModified": 1614291963,
         "narHash": "sha256-0uGNnjWpvOFe6nEhqYoqPk2yuC7ghOLavW0zQVzukyw=",
-        "owner": "zserik",
+        "owner": "zseri",
         "repo": "crulz-rs",
         "rev": "4d6bb6367923e0018ff39e3471fd7c2c5c0c2b2e",
         "type": "github"
       },
       "original": {
-        "owner": "zserik",
+        "owner": "zseri",
         "repo": "crulz-rs",
         "type": "github"
       }
@@ -38,7 +38,38 @@
         "type": "github"
       }
     },
+    "flake-compat_2": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1606424373,
+        "narHash": "sha256-oq8d4//CJOrVj+EcOaSXvMebvuTkmBJuT5tzlfewUnQ=",
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "rev": "99f1c2157fba4bfe6211a321fd0ee43199025dbf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "type": "github"
+      }
+    },
     "flake-utils": {
+      "locked": {
+        "lastModified": 1610051610,
+        "narHash": "sha256-U9rPz/usA1/Aohhk7Cmc2gBrEEKRzcW4nwPWMPwja4Y=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "3982c9903e93927c2164caa727cd3f6a0e6d14cc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "flake-utils_2": {
       "locked": {
         "lastModified": 1610051610,
         "narHash": "sha256-U9rPz/usA1/Aohhk7Cmc2gBrEEKRzcW4nwPWMPwja4Y=",
@@ -72,7 +103,30 @@
     "root": {
       "inputs": {
         "crulz": "crulz",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "zs-filecrawler": "zs-filecrawler"
+      }
+    },
+    "zs-filecrawler": {
+      "inputs": {
+        "flake-compat": "flake-compat_2",
+        "flake-utils": "flake-utils_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1614466828,
+        "narHash": "sha256-T9UsaTuqpheUGM23+jpifR/iUNbz6RjHakKt3zGcHpc=",
+        "owner": "zseri",
+        "repo": "zs-filecrawler",
+        "rev": "ced7eadd7a1ce85ca1967ed735a4ada23de43440",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zseri",
+        "repo": "zs-filecrawler",
+        "type": "github"
       }
     }
   },
