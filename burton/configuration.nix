@@ -59,6 +59,10 @@
     extraGroups = [ "wheel" ];
   };
 
+  fonts.fonts = with pkgs; [
+    powerline-fonts
+  ];
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = import ./packages.nix pkgs;
