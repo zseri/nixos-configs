@@ -1,0 +1,93 @@
+{
+  "nodes": {
+    "crulz": {
+      "inputs": {
+        "flake-compat": "flake-compat",
+        "flake-utils": "flake-utils",
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1614291963,
+        "narHash": "sha256-0uGNnjWpvOFe6nEhqYoqPk2yuC7ghOLavW0zQVzukyw=",
+        "owner": "zserik",
+        "repo": "crulz-rs",
+        "rev": "4d6bb6367923e0018ff39e3471fd7c2c5c0c2b2e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zserik",
+        "repo": "crulz-rs",
+        "type": "github"
+      }
+    },
+    "flake-compat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1606424373,
+        "narHash": "sha256-oq8d4//CJOrVj+EcOaSXvMebvuTkmBJuT5tzlfewUnQ=",
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "rev": "99f1c2157fba4bfe6211a321fd0ee43199025dbf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "type": "github"
+      }
+    },
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1610051610,
+        "narHash": "sha256-U9rPz/usA1/Aohhk7Cmc2gBrEEKRzcW4nwPWMPwja4Y=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "3982c9903e93927c2164caa727cd3f6a0e6d14cc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1614171158,
+        "narHash": "sha256-R3x5kJ5+083HDMwhHextzkhSV928LyNvVFajcbB5bRc=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "06b11191834abae2b9ccace27818b74fe5a4b293",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-20.09",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1614449940,
+        "narHash": "sha256-UIaNul5LdOZfb+AhbU9mcEve+H8f3ZR8yYZhza59dvE=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "76e6896331db36434fde8fee7a5a880f4a8d4e94",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "root": {
+      "inputs": {
+        "crulz": "crulz",
+        "nixpkgs": "nixpkgs_2"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
