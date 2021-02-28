@@ -22,6 +22,7 @@ pkgs: with pkgs; [
   gpm
   graphviz
   hexedit
+  kak-lsp
   kakoune
   mc
   moreutils
