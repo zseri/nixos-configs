@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -61,6 +61,12 @@
 
   fonts.fonts = with pkgs; [
     powerline-fonts
+  ];
+
+  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName) [
+    "discord"
+    "vscode"
   ];
 
   # List packages installed in system profile. To search, run:

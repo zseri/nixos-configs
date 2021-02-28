@@ -9,6 +9,7 @@ pkgs: with pkgs; [
   crulz
   curl
   ding
+  discord
   dropbear
   evince
   file
@@ -42,6 +43,7 @@ pkgs: with pkgs; [
   tree
   valgrind
   vlc
+  vscode
   wget
   wireguard
   wireshark
