@@ -22,6 +22,7 @@ pkgs: with pkgs; [
   gpm
   graphviz
   hexedit
+  kakoune
   mc
   moreutils
   mosh
@@ -42,6 +43,7 @@ pkgs: with pkgs; [
   vlc
   wget
   wireguard
+  wireshark
   wpa_supplicant_gui
   xfce.xfce4-cpugraph-plugin
   xfce.xfce4-power-manager

@@ -56,7 +56,7 @@
 
   users.users.zseri = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "wireshark" ];
   };
 
   fonts.fonts = with pkgs; [
