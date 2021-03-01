@@ -52,5 +52,6 @@ pkgs: with pkgs; [
   xfce.xfce4-power-manager
   xfce.xfce4-screenshooter
   xfce.xfce4-whiskermenu-plugin
+  xorg.xmodmap
   zs-filecrawler
 ]
