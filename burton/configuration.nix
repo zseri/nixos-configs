@@ -108,7 +108,7 @@
     # and cache outputs and derivations for offline work
     package = pkgs.nixFlakes;
     extraOptions = ''
-      experimental-features = nix-command flakes
+      experimental-features = nix-command ca-references flakes
       keep-outputs = true
       keep-derivations = true
     '';
