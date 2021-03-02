@@ -17,7 +17,7 @@ pkgs: with pkgs; [
   firefox
   gcc
   gimp
-  git
+  gitFull
   gnome3.gucharmap
   gnused
   gnutar
