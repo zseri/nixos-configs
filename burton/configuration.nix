@@ -70,6 +70,10 @@
   # $ nix search wget
   environment.systemPackages = import ./packages.nix pkgs;
 
+  environment.pathsToLink = [
+    "/share/nix-direnv"
+  ];
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
