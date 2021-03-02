@@ -63,11 +63,8 @@
     powerline-fonts
   ];
 
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName) [
-    "discord"
-    "vscode"
-  ];
+  nixpkgs.config.allowUnfreePredicate =
+    pkg: builtins.elem (lib.getName pkg) (import ./unfree_allow.nix);
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
