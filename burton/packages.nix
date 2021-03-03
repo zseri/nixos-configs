@@ -26,6 +26,7 @@ pkgs: with pkgs; [
   hexedit
   kak-lsp
   kakoune
+  light
   mc
   moreutils
   mosh
