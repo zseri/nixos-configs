@@ -8,18 +8,20 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./i18n.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+    systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;
+  };
 
   powerManagement.enable = true;
+  time.timeZone = "Europe/Berlin";
 
   networking.hostName = "burton";
   networking.wireless.enable = true;
-
-  time.timeZone = "Europe/Berlin";
 
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
   # Per-interface useDHCP will be mandatory in the future, so this generated config
@@ -34,18 +36,7 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "de_DE.UTF-8";
-  i18n.extraLocaleSettings = {
-    LC_MESSAGES = "en_US.UTF-8";
-  };
-  console = {
-    font = "Lat2-Terminus16";
-    keyMap = "de-latin1-nodeadkeys";
-  };
-
-  # Configure keymap in X11
-  services.xserver.layout = "de";
-  services.xserver.xkbVariant = "nodeadkeys";
+  console.font = "Lat2-Terminus16";
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
