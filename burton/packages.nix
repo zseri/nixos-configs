@@ -28,6 +28,7 @@ pkgs: with pkgs; [
   kakoune
   light
   mc
+  mixxx
   moreutils
   mosh
   nano
