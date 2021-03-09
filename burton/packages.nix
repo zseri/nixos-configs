@@ -4,7 +4,6 @@ let
   vscodeExtensions = with pkgs.vscode-extensions; [
     ms-vscode.cpptools
     ms-vscode.Go
-    ms-python.python
     matklad.rust-analyzer
   ];
 in with pkgs; [
