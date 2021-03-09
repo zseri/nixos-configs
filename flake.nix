@@ -7,17 +7,25 @@
     zs-filecrawler.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, ... } @inputs: {
+  outputs = { self, nixpkgs, ... } @inputs:
+  let
+    overlay-stack = {
+      nixpkgs.overlays = with inputs; [
+        crulz.overlay
+        zs-filecrawler.overlay
+      ];
+    };
+
+  in {
     nixosConfigurations.burton = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-      {
-        nixpkgs.overlays = with inputs; [
-          crulz.overlay
-          zs-filecrawler.overlay
-        ];
-      }
-      ./burton/configuration.nix
+        overlay-stack
+        ./burton/configuration.nix
+        ./burton/hardware-configuration.nix
+        ./utils/nix.nix
+        ./utils/powerline.nix
+        ./i18n/de.nix
       ];
     };
   };

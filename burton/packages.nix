@@ -9,7 +9,6 @@ pkgs: with pkgs; [
   crulz
   curl
   ding
-  direnv
   discord
   dropbear
   evince
@@ -32,7 +31,6 @@ pkgs: with pkgs; [
   moreutils
   mosh
   nano
-  nix-direnv
   octaveFull
   odt2txt
   pciutils

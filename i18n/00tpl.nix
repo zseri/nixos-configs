@@ -1,11 +1,6 @@
-{ config, pkgs, lib, ... }:
+{ lang, layout, loxtra, variant }:
 
-let
-  lang = "de_DE";
-  layout = "de";
-  loxtra = "latin1";
-  variant = "nodeadkeys";
-in {
+{
   # Select internationalisation properties.
   i18n.defaultLocale = "${lang}.UTF-8";
   i18n.extraLocaleSettings = {

@@ -5,12 +5,6 @@
 { config, pkgs, lib, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./i18n.nix
-    ];
-
   # Use the systemd-boot EFI boot loader.
   boot.loader = {
     systemd-boot.enable = true;
@@ -35,10 +29,6 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  console.font = "ter-powerline-v16n";
-  services.kmscon.enable = true;
-  services.kmscon.extraConfig = ''font-name=Cousine for Powerline Regular'';
-
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
@@ -51,20 +41,12 @@
     extraGroups = [ "wheel" "wireshark" ];
   };
 
-  fonts.fonts = with pkgs; [
-    powerline-fonts
-  ];
-
   nixpkgs.config.allowUnfreePredicate =
     pkg: builtins.elem (lib.getName pkg) (import ./unfree_allow.nix);
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = import ./packages.nix pkgs;
-
-  environment.pathsToLink = [
-    "/share/nix-direnv"
-  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -85,6 +67,8 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
+  services.kmscon.enable = true;
+
   services.xserver = {
     enable = true;
     libinput.enable = true;
@@ -93,17 +77,6 @@
       xfce.enable = true;
     };
     displayManager.defaultSession = "xfce";
-  };
-
-  nix = {
-    # enable Flakes (https://nixos.wiki/wiki/Flakes)
-    # and cache outputs and derivations for offline work
-    package = pkgs.nixFlakes;
-    extraOptions = ''
-      experimental-features = nix-command ca-references flakes
-      keep-outputs = true
-      keep-derivations = true
-    '';
   };
 
   # This value determines the NixOS release from which the default
