@@ -2,15 +2,10 @@ pkgs:
 
 let
   vscodeExtensions = with pkgs.vscode-extensions; [
-    buncip.better-toml
     ms-vscode.cpptools
-    llvm-vs-code-extensions.vscode-clangd
-    ms-vscode.cmake-tools
-    eamodio.gitlens
-    golang.go
+    ms-vscode.Go
     ms-python.python
     matklad.rust-analyzer
-    twxs.cmake
   ];
 in with pkgs; [
   bc

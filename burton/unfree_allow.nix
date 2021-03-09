@@ -1,4 +1,4 @@
 [
   "discord"
-  "vscode"
+  "vscode-extension-ms-vscode-cpptools"
 ]
