@@ -1,4 +1,18 @@
-pkgs: with pkgs; [
+pkgs:
+
+let
+  vscodeExtensions = with pkgs.vscode-extensions; [
+    buncip.better-toml
+    ms-vscode.cpptools
+    llvm-vs-code-extensions.vscode-clangd
+    ms-vscode.cmake-tools
+    eamodio.gitlens
+    golang.go
+    ms-python.python
+    matklad.rust-analyzer
+    twxs.cmake
+  ];
+in with pkgs; [
   bc
   binutils
   cargo-audit
@@ -18,6 +32,7 @@ pkgs: with pkgs; [
   gimp
   gitFull
   gnome3.gucharmap
+  gnome3.meld
   gnused
   gnutar
   gpm
@@ -44,11 +59,15 @@ pkgs: with pkgs; [
   tree
   valgrind
   vlc
-  vscode
+  (vscode-with-extensions.override {
+    vscode = pkgs.vscodium;
+    inherit vscodeExtensions;
+  })
   wget
   wireguard
   wireshark
   wpa_supplicant_gui
+  xfce.terminal
   xfce.xfce4-cpugraph-plugin
   xfce.xfce4-power-manager
   xfce.xfce4-screenshooter
