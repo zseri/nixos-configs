@@ -21,6 +21,7 @@ in with pkgs; [
   evince
   file
   firefox
+  flashium
   gcc
   gimp
   gitFull

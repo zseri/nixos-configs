@@ -5,6 +5,8 @@
     crulz.inputs.nixpkgs.follows = "nixpkgs";
     zs-filecrawler.url = "github:zseri/zs-filecrawler";
     zs-filecrawler.inputs.nixpkgs.follows = "nixpkgs";
+    # we intentionally don't overwrite the nixpkgs input for flashium
+    flashium.url = "github:zseri/flashium";
   };
 
   outputs = { self, nixpkgs, ... } @inputs:
@@ -13,6 +15,7 @@
       nixpkgs.overlays = with inputs; [
         crulz.overlay
         zs-filecrawler.overlay
+        flashium.overlay
       ];
     };
 

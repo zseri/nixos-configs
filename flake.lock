@@ -84,7 +84,42 @@
         "type": "github"
       }
     },
+    "flashium": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1615344470,
+        "narHash": "sha256-/AucQSzc0/gVBC/rYPhDBo/Ll0KmNHuzLDrCbd7J+YA=",
+        "owner": "zseri",
+        "repo": "flashium",
+        "rev": "a94b0b372a1ee4f4a573c8a8ac95d1d22f62e5f6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zseri",
+        "repo": "flashium",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1587244138,
+        "narHash": "sha256-WwO0i0Qf5ki9sLZyHxHEJ2cFBCv6fF9VIA4MQ8vTdhE=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "f63bc540cbd559736f1671e4ee10e4560b3d5d2a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "f63bc540cbd559736f1671e4ee10e4560b3d5d2a",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
       "locked": {
         "lastModified": 1614758166,
         "narHash": "sha256-I+LJW8dsD990K/HH53il36SGarKY/HYtFeXfIN03nEQ=",
@@ -103,7 +138,8 @@
     "root": {
       "inputs": {
         "crulz": "crulz",
-        "nixpkgs": "nixpkgs",
+        "flashium": "flashium",
+        "nixpkgs": "nixpkgs_2",
         "zs-filecrawler": "zs-filecrawler"
       }
     },
